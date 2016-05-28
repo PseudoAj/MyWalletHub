@@ -34,9 +34,9 @@ public class PalindromeTest{
   @Test
   //3. Check for the special characters, palindrome strings should ignore the special characters if any
   public void evalSplChrs(){
-    Palindrome spTest1=new Palindrome("A#a");
+    Palindrome spTest1=new Palindrome("#a@@bbbbb&*()a");
     assertTrue(spTest1.isPalindrome());
-    Palindrome spTest2=new Palindrome("%%%^#@ab");
+    Palindrome spTest2=new Palindrome("%%%^#@abhjbsajlkdblkj#6584^bkjbsaf59676oi)((7y6ibkb))");
     assertFalse(spTest2.isPalindrome());
   }
 
