@@ -10,3 +10,10 @@ All the code is hosted on github and here is the **link: [https://github.com/Pse
 ## Solutions
 ### 1. Java
 #### 1.1 Palindrome
+```java
+ javac -cp .:/usr/share/java/junit4.jar PalindromeTest.java
+```
+
+```java
+java -cp .:/usr/share/java/junit4.jar org.junit.runner.JUnitCore PalindromeTest
+```
