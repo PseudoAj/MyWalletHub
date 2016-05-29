@@ -38,3 +38,14 @@ Following test classes have been checked using JUnit:
 ```java
 java -cp .:/usr/share/java/junit4.jar org.junit.runner.JUnitCore PalindromeTest
 ```
+
+#### 1.2 K-Complimentary
+Compiling:
+```java
+javac -cp /home/pseudoaj/Downloads/commons-collections4-4.1/commons-collections4-4.1.jar KComplimentary.java
+```
+
+Running:
+```java
+java -cp /home/pseudoaj/Downloads/commons-collections4-4.1/commons-collections4-4.1.jar:. KComplimentary
+```
