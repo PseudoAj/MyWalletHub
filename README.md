@@ -20,7 +20,7 @@ All the code is hosted on github and here is the **link: [https://github.com/Pse
 ## Solutions
 ### 1. Java
 #### 1.1 Palindrome
-Solution snippet:
+**Solution snippet:**
 ```java
 //method to check for Palindrome
 public boolean isPalindrome(){
@@ -31,33 +31,37 @@ public boolean isPalindrome(){
   return false;
 }
 ```
-Tests:
-1. Case sensitive strings have been verified; ignores character attributes
-2. Null and empty strings have been checked, doesn't return them as a palindrome
-3. Special characters are handled; they are replaced from the character sequence
 
-How to run:
+**Tests:**
+
+1. Case sensitive strings have been verified; ignores character attributes
+1. Null and empty strings have been checked, doesn't return them as a palindrome
+1. Special characters are handled; they are replaced from the character sequence
+
+**How to run:**
+
 1. Change directory to `java/Task1/`
-2. Compile(assuming junit is installed):
+2. Compile(assuming junit is installed) and run:
 ```java
  javac -cp .:/usr/share/java/junit4.jar PalindromeTest.java
 ```
-3. Run:
 ```java
 java -cp .:/usr/share/java/junit4.jar org.junit.runner.JUnitCore PalindromeTest
 ```
 
-Performance:
+**Performance:**
 The solution works in a linear time i.e. `O(n)` and depends on the native calls
 
-Notes:
+**Notes:**
+
 1. All the tests have been verified
-2. The null string is replaced with the empty string while initialization
+1. The null string is replaced with the empty string while initialization
 
 #### 1.2 K-Complimentary
-Solution snippet:
+**Solution snippet:**
 Two different solutions have been tested:
-1. Iterative:
+
+Iterative:
 ```java
 //method to actually check for the k-complimentary pairs
 //This is a brute force implementation
@@ -78,7 +82,8 @@ public int isKComplimentary(){
   return pairsCount;
 }
 ```
-2. Bidirectional HashMap:
+
+Bidirectional HashMap:
 ```java
 //An efficient method to check for the k-complimentary pairs
 //This uses a hashmap to optimize the performance
@@ -96,20 +101,26 @@ public int isKComplimentaryHashMap(){
   return pairsCount/2;//removing count for interchanged pairs
 }
 ```
-Tests:
 
-How to run:
-Performance:
-Compiling:
-Notes:
+**How to run:**
+
+Compiling and run:
 ```java
 javac -cp /home/pseudoaj/Downloads/commons-collections4-4.1/commons-collections4-4.1.jar KComplimentary.java
 ```
 
-Running:
 ```java
 java -cp /home/pseudoaj/Downloads/commons-collections4-4.1/commons-collections4-4.1.jar:. KComplimentary
 ```
-Performance:
+
+
+**Performance:**
+Following image depicts a simple analytics for varying size of array:
 
 ![Logo](./Images/plotTask2.png)
+
+**Notes:**
+
+1. use of apache commons bi-directional HashMap
+1. clean code is presented under java/taks2
+1. Full implementation is included in Other too
