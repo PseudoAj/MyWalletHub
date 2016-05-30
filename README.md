@@ -1,5 +1,5 @@
 # My WalletHub   
-![Logo](./logo.jpg)
+![Logo](./Images/logo.jpg)
 
 ## "Hello World"
 I am Ajay Kavuri ([pseudoaj](www.pseudoaj.com)), I am a graduate student here at West Virginia University. The solutions for the programming assignment are presented here.
@@ -49,3 +49,6 @@ Running:
 ```java
 java -cp /home/pseudoaj/Downloads/commons-collections4-4.1/commons-collections4-4.1.jar:. KComplimentary
 ```
+Performance:
+
+![Logo](./Images/plotTask2.png)
