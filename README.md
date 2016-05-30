@@ -11,6 +11,8 @@ All the code is hosted on github and here is the **link: [https://github.com/Pse
 1. **Operating system:** Ubuntu 14.04
 1. **Editor:** Atom
 1. **Java:** 1.8.0_91
+1. Vagrant(for MySQL)
+1. Scotch box(Lamp Stack)
 1. Junit4
 1. White board and caffine
 
@@ -18,7 +20,7 @@ All the code is hosted on github and here is the **link: [https://github.com/Pse
 ## Solutions
 ### 1. Java
 #### 1.1 Palindrome
-Palindrome can be checked using the following function:
+Solution snippet:
 ```java
 //method to check for Palindrome
 public boolean isPalindrome(){
@@ -29,18 +31,77 @@ public boolean isPalindrome(){
   return false;
 }
 ```
-Following test classes have been checked using JUnit:
-1.
+Tests:
+1. Case sensitive strings have been verified; ignores character attributes
+2. Null and empty strings have been checked, doesn't return them as a palindrome
+3. Special characters are handled; they are replaced from the character sequence
+
+How to run:
+1. Change directory to `java/Task1/`
+2. Compile(assuming junit is installed):
 ```java
  javac -cp .:/usr/share/java/junit4.jar PalindromeTest.java
 ```
-
+3. Run:
 ```java
 java -cp .:/usr/share/java/junit4.jar org.junit.runner.JUnitCore PalindromeTest
 ```
 
+Performance:
+The solution works in a linear time i.e. `O(n)` and depends on the native calls
+
+Notes:
+1. All the tests have been verified
+2. The null string is replaced with the empty string while initialization
+
 #### 1.2 K-Complimentary
+Solution snippet:
+Two different solutions have been tested:
+1. Iterative:
+```java
+//method to actually check for the k-complimentary pairs
+//This is a brute force implementation
+//performance: O(n^2); as we are traversing the array twice
+public int isKComplimentary(){
+  int pairsCount=0;
+  System.out.println("k-complimentary pairs are:");
+  for(int i=0; i<this.checkAr.length; i++){
+    for(int j=0; j<this.checkAr.length; j++){
+      if(i<j){//avoids generating interchanged pairs and same value
+        if(this.checkAr[i]+checkAr[j]==kVal && this.checkAr[i]!=checkAr[j]){//checks for the repeated values that sum up
+          //System.out.println(this.checkAr[i]+","+checkAr[j]);
+          pairsCount++;
+        }
+      }
+    }
+  }
+  return pairsCount;
+}
+```
+2. Bidirectional HashMap:
+```java
+//An efficient method to check for the k-complimentary pairs
+//This uses a hashmap to optimize the performance
+//performance: O(n); as we are traversing only once and retriving using bidirectional hashmaps
+public int isKComplimentaryHashMap(){
+  int pairsCount=0;
+  System.out.println("k-complimentary pairs using hashing are:");
+  for(int i=0;i<this.checkAr.length;i++){
+    int res=this.kVal-this.checkAr[i];
+    if(myMap.getKey(res)!=null && res!=this.checkAr[i]){//checks for duplicate values
+      //System.out.println(this.checkAr[i]+","+this.checkAr[myMap.getKey(res)]);
+      pairsCount++;
+    }
+  }
+  return pairsCount/2;//removing count for interchanged pairs
+}
+```
+Tests:
+
+How to run:
+Performance:
 Compiling:
+Notes:
 ```java
 javac -cp /home/pseudoaj/Downloads/commons-collections4-4.1/commons-collections4-4.1.jar KComplimentary.java
 ```
