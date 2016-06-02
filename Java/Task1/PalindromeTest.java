@@ -5,7 +5,7 @@
 *@Author Ajay Krishna Teja Kavuri
 *@Since 27 May 2016
 */
-//Import the Palindrome
+//Import the JUnit
 import org.junit.Test;
 import static org.junit.Assert.*;//why static? just to have static elements of this interface in scope
 

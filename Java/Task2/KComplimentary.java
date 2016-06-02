@@ -9,6 +9,7 @@
 //Imports for bidirectional hashmap
 import org.apache.commons.collections4.BidiMap;
 import org.apache.commons.collections4.bidimap.DualHashBidiMap;
+import java.lang.*;
 
 //Implementation
 class KComplimentary{
@@ -21,6 +22,9 @@ class KComplimentary{
 
   //Intialize the variables
   public KComplimentary(int[] inputArr,int inputK){
+    if(inputArr==null){
+      inputArr=new int[0];//convert null into empty
+    }
     this.checkAr=inputArr;
     this.kVal=inputK;
     for(int i=0;i<this.checkAr.length;i++){
@@ -33,7 +37,6 @@ class KComplimentary{
   //performance: O(n); as we are traversing only once and retriving using bidirectional hashmaps
   public int isKComplimentaryHashMap(){
     int pairsCount=0;
-    System.out.println("k-complimentary pairs using hashing are:");
     for(int i=0;i<this.checkAr.length;i++){
       int res=this.kVal-this.checkAr[i];
       if(myMap.getKey(res)!=null && res!=this.checkAr[i]){//checks for duplicate values

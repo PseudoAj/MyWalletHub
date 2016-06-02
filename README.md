@@ -115,7 +115,7 @@ java -cp /home/pseudoaj/Downloads/commons-collections4-4.1/commons-collections4-
 
 
 **Performance:**
-Following image depicts a simple analytics for varying size of array:
+Following image depicts a simple analytics for varying size of array; clearly the Bi-directional HashMap outperforms the Iterative logic(implementation is in `other/KComplimentary.java`):
 
 ![Logo](./Images/plotTask2.png)
 
