@@ -1,0 +1,5 @@
+CAP_ME('UNITED states Of AmERIca')
+United States Of America
+Query_ID	Duration	Query
+1	0.00024475	DROP FUNCTION IF EXISTS CAP_ME
+2	0.00021075	CREATE FUNCTION CAP_ME(str VARCHAR(300)) RETURNS VARCHAR(300)\nBEGIN\n  \n  DECLARE capStr VARCHAR(300);\n  \n  SET str = CONCAT(LOWER(str),' ');\n  SET capStr = '';\n  \n  WHILE(LOCATE(' ',str) > 0) DO\n    SET capStr = CONCAT(capStr, ' ', CONCAT(UCASE(LEFT(LEFT(str, LOCATE(' ',str) - 1), 1)), SUBSTRING(LEF

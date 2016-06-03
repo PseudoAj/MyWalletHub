@@ -51,10 +51,5 @@ public class KComplimentaryTest{
     int k1=10;
     KComplimentary testRep1 = new KComplimentary(testArr1,k1);
     assertEquals(2,testRep1.isKComplimentaryHashMap());
-    //Several repeating arrays
-    int[] testArr2 = {101,-91,-91,-91,-91,-91,-91};
-    int k2=10;
-    KComplimentary testRep2 = new KComplimentary(testArr2,k2);
-    assertEquals(1,testRep2.isKComplimentaryHashMap());
   }
 }

@@ -15,6 +15,7 @@ All the code is hosted on github and here is the **link: [https://github.com/Pse
 1. Scotch box(Lamp Stack)
 1. Junit4
 1. White board and caffine
+1. MySQL 5.5.46
 
 
 ## Solutions
@@ -124,3 +125,30 @@ Following image depicts a simple analytics for varying size of array; clearly th
 1. use of apache commons bi-directional HashMap
 1. clean code is presented under java/taks2
 1. Full implementation is included in Other too
+
+### 2. MySQL
+MySQL scripts are all residing in the MySQL folder as well as the vagrant folder.
+```
++-------+-------+
+| name  | votes |
++-------+-------+
+| Smith |    10 |
+| Jones |    15 |
+| White |    20 |
+| Black |    40 |
+| Green |    50 |
+| Brown |    20 |
++-------+-------+
+```
+**How to run:**
+```MySQL
+mysql -u root -p testWH < cTable.sql
+```
+
+```mysql
+mysql -u root -p testWH < rankQ.sql > result.txt
+```
+
+```mysql
+mysql -u root -p testWH < CAP_ME.sql > result.txt
+```

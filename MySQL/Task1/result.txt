@@ -1,0 +1,7 @@
+name	votes	rank
+Green	50	1
+Black	40	2
+White	20	3
+Brown	20	4
+Jones	15	5
+Smith	10	6
